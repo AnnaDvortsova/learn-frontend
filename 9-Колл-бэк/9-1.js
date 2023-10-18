@@ -11,8 +11,10 @@ function forEach(array, callback) {
     }
 }
 
-function showElementAndIndex(elem, index) {
-    console.log(`Элемент ${elem} с индексом ${index}`);
-}
+// function showElementAndIndex(elem, index) {
+//     console.log(`Элемент ${elem} с индексом ${index}`);
+// }
 
-forEach(arr, showElementAndIndex);
+forEach(arr, (elem, index) => {
+    console.log(`Элемент ${elem} с индексом ${index}`);
+});

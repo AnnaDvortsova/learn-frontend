@@ -7,17 +7,29 @@ const arr1 = ["apricot", "banana", "kiwi", "lime", "apple", "mango"];
 const arr2 = ["apricot", "banana", "kiwi", "lime", "42", "mango"];
 
 function find(array, callback) {
-    for (let i = 0; i < array.length; i++) {
-        callback(array[i]);
+    for (let index = 0; index < array.length; index++) {
+        const elem = array[index];
+        const result = callback(elem, index);
+        if (result) {
+            return elem;
+        }
     }
+    return undefined;
 }
 
-function appleString(elem) {
+// function appleString(elem) {
+//     if (elem === 'apple') {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+const appleString = find(arr1, (elem) => {
     if (elem === 'apple') {
-        console.log(elem);
+        return true;
+    } else {
+        return false;
     }
-
-}
-
-find(arr1, appleString);
-find(arr2, appleString);
+});
+console.log(appleString);

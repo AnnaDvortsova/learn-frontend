@@ -4,17 +4,22 @@
 // - Передайте в созданную функцию `map` числовой массив, а в качестве callback-функции - функцию, которая будет высчитывать квадрат каждого элемента и добавлять его в новый массив. Callback-функцию можно создавать стрелочным способом.
 
 const arr = [2, 3, 4, 5];
-let newArray = [];
 
 function map(array, callback) {
-    for (let i = 0; i < array.length; i++) {
-        callback(array[i]);
+    let newArray = [];
+    for (let index = 0; index < array.length; index++) {
+        const elem = array[index];
+        const result = callback(elem, index);
+        newArray.push(result);
     }
+    return newArray;
 }
 
-function squareCallbackFunction(elem) {
-    newArray.push(elem * elem);
-}
+// function squareCallbackFunction(elem) {
+//     return elem * elem;
+// }
 
-map(arr, squareCallbackFunction);
-console.log(newArray);
+const squareFunction = map(arr, (elem) => {
+    return elem * elem;
+});
+console.log(squareFunction);

@@ -4,21 +4,33 @@
 
 const arr1 = [4, "i", 67, "phone", -434, "42"];
 const arr2 = [4, 67, -434, 0];
-let newArray = [];
 
 function filter(array, callback) {
-    for (let i = 0; i < array.length; i++) {
-        callback(array[i]);
+    let newArray = [];
+    for (let index = 0; index < array.length; index++) {
+        const elem = array[index];
+        const result = callback(elem, index);
+        if (result) {
+            newArray.push(elem);
+        }
     }
+    return newArray;
 }
 
-function elementType(elem) {
+// function elementType(elem) {
+//     if (typeof elem === 'string') {
+//         return true;
+//     } else {
+//         return false;
+//     }
+// }
+
+
+const elementType = filter(arr1, (elem) => {
     if (typeof elem === 'string') {
-        newArray.push(elem);
+        return true;
+    } else {
+        return false;
     }
-}
-
-filter(arr2, elementType);
-console.log(newArray);
-
-
+});
+console.log(elementType);
