@@ -18,3 +18,8 @@ function forEach(array, callback) {
 forEach(arr, (elem, index) => {
     console.log(`Элемент ${elem} с индексом ${index}`);
 });
+
+// arr.forEach((elem, index) => {
+//     console.log(`Элемент ${elem} с индексом ${index}`);
+//  });
+// метод массива

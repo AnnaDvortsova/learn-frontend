@@ -30,3 +30,13 @@ const inversion = map(arr, (elem) => {
     }
 });
 console.log(inversion);
+
+// const inversion1 = arr.map((elem) => {
+//     if (elem === 0) {
+//         return 1;
+//     } else {
+//         return 0;
+//     }
+// });
+// console.log(inversion);
+// метод массива

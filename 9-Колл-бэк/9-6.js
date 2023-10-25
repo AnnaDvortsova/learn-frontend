@@ -34,3 +34,7 @@ const elementType = filter(arr1, (elem) => {
     }
 });
 console.log(elementType);
+
+// const elementType1 = arr1.filter((elem) => typeof elem === 'string');
+// console.log(elementType1);
+// метод массива

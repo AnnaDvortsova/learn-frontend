@@ -19,3 +19,9 @@ forEach(arr, (elem, index) => {
     let result = elem + index;
     console.log(`${elem} + ${index} = ${result}`);
 });
+
+// arr.forEach((elem, index) => {
+//     let result = elem + index;
+//     console.log(`${elem} + ${index} = ${result}`);
+// });
+// метод массива

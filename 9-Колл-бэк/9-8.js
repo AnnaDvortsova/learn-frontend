@@ -32,3 +32,7 @@ const modulo = find(arr1, (elem) => {
     }
 });
 console.log(modulo);
+
+// const modulo1 = arr1.find((elem) => elem % 5 === 3);
+// console.log(modulo1);
+// метод массива

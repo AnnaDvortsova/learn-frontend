@@ -23,3 +23,9 @@ const squareFunction = map(arr, (elem) => {
     return elem * elem;
 });
 console.log(squareFunction);
+
+// const squareFunction1 = arr.map((elem) => {
+//     return elem * elem;
+// });
+// console.log(squareFunction1);
+// метод массива

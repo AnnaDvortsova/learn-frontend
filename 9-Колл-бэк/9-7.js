@@ -33,3 +33,7 @@ const appleString = find(arr1, (elem) => {
     }
 });
 console.log(appleString);
+
+// const appleString1 = arr1.find((elem) => elem === 'apple');
+// console.log(appleString1);
+// метод массива

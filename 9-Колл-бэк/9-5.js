@@ -34,3 +34,7 @@ const evenArray = filter(arr1, (elem) => {
     }
 });
 console.log(evenArray);
+
+// const evenArray1 = arr1.filter((elem) => elem % 2 === 0);
+// console.log(evenArray1);
+// метод массива
