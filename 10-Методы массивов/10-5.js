@@ -13,3 +13,26 @@ const query2 = [4, 4, 4];
 const result2 = indexOfArray(twoDimArray, query2);
 console.log(result2); // -1
 
+function isEqual(arr1, arr2) {
+    let result = true;
+    if (arr1.length !== arr2.length) {
+        result = false;
+    } else {
+        result = arr1.every((elem, index) => (elem === arr2[index]));
+    }
+    return result;
+}
+
+function indexOfArray(array1, array2) {
+    const result = array1.findIndex((element) => isEqual(element, array2));
+    return result;
+
+    // for (let i = 0; i < array1.length; i++) {
+    //     for (let j = 0; j < array1[i].length; j++) {
+    //         if (array2[i] === array1[i][j]) {
+    //             return i;
+    //         }
+    //     }
+    // }
+    // return -1;
+}

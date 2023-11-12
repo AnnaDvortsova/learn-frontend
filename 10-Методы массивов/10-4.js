@@ -7,8 +7,7 @@ const newArr = unique(arr);
 console.log(newArr); // [ 1, 2, 3, 4, 5, 6 ]
 
 function unique(array) {
-    const newArray = array.filter((element) => (!newArray.includes(element)));
-
+    const newArray = array.filter((element, index, arr) => arr.indexOf(element) === index);
     // let newArray = [];
     // array.forEach((element) => {
     //     if (!newArray.includes(element)) {

@@ -7,7 +7,7 @@ const newArr = withoutEmpty(arr);
 console.log(newArr); // [1, "42", 67, -45, "apple"]
 
 function withoutEmpty(array) {
-    const newArray = array.filter(Boolean);
+    const newArray = array.filter((elem) => elem);
 
     // let newArray = [];
     // array.forEach((element) => {
