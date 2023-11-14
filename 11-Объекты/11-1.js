@@ -20,7 +20,7 @@ function movies(array1, array2) {
         let newObject = {};
         newObject.title = elem;
         newObject.director = array2[index];
-        // console.log(newObject);
+        return newObject;
     });
     return result;
 
