@@ -1,7 +1,8 @@
-// ***Задача 11.6***
+// ***Задача 11.8***
 
-// Дан массив объектов. Вывести в консоль значения свойства `username` всех объектов.
+// Дан массив объектов. Найти в нём элемент, `id` которого равен значению переменной `userId`.
 
+let userId = 5;
 
 const users = [
     {
@@ -67,15 +68,12 @@ const users = [
 ];
 
 //output
-//   Bret
-//   Antonette
-//   Samantha
-//   Karianne
-//   Kamren
-//   Leopoldo_Corkery
-//   Elwyn.Skiles
-//   Maxime_Nienow
-//   Delphine
-//   Moriah.Stanton
+//   {
+//     id: 5,
+//     name: "Chelsey Dietrich",
+//     username: "Kamren",
+//     email: "Lucio_Hettinger@annie.ca",
+//   },
 
-users.forEach((elem) => console.log(elem.username));
+const result = users.find((elem) => elem.id === userId);
+console.log(result);
