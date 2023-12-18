@@ -17,4 +17,5 @@ const dog = {
 // "Москва"
 // "ул. Ленина, 2"
 
-console.log(Object.values(dog));
+const values = Object.values(dog);
+values.forEach((elem) => console.log(elem));

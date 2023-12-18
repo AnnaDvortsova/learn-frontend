@@ -17,4 +17,9 @@ const dog = {
 // "city: Москва"
 // "address: ул. Ленина, 2"
 
-console.log(Object.entries(dog));
+const nameValues = Object.entries(dog);
+nameValues.forEach((elem) => console.log(`${elem[0]}: ${elem[1]}`));
+
+// for (const nameProp in dog) {
+//     console.log(`${nameProp}: ${dog[nameProp]}`)
+// }

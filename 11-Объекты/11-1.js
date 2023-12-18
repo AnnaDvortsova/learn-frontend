@@ -15,10 +15,17 @@ const email = "ivanov@mail.ru";
 // 	email: "ivanov@mail.ru",
 // };
 
-const user = {};
-user["first-name"] = firstName;
-user["last-name"] = lastName;
-user['age'] = age;
-user['email'] = email;
+// const user = {};
+// user["first-name"] = firstName;
+// user["last-name"] = lastName;
+// user['age'] = age;
+// user['email'] = email;
 
 console.log(user);
+
+const user = {
+    "first-name": firstName,
+    "last-name": lastName,
+    age,
+    email,
+};

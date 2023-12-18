@@ -77,3 +77,23 @@ const respData = {
 //       ],
 //     },
 //   ];
+
+function camerasName(device, cameras) {
+    const devicesArray = device.cameraIDs;
+    const camerasBarrier = cameras.filter((camera) => devicesArray.includes(camera.id));
+    const barrier = {
+        id: device.id,
+        name: device.name,
+        cameras: camerasBarrier,
+    };
+    return barrier;
+}
+
+function objectBarriers(respData) {
+    const devices = respData.devices;
+    const cameras = respData.cameras;
+    const newDevices = devices.map((device) => camerasName(device, cameras));
+    return newDevices;
+}
+
+console.log(objectBarriers(respData));

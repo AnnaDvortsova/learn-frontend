@@ -38,22 +38,39 @@ const cameras = [
 //         ],
 //  }
 
+// function camerasName(devices, cameras) {
+//     const devicesArray = devices.cameraIDs;
+//     let newObject = {};
+//     let newArray = devicesArray.map((elementDevicesArray) => {
+//         let objectCameras = {};
+//         const names = cameras.find((name) => name.id === elementDevicesArray);
+
+//         objectCameras.id = names.id;
+//         objectCameras.name = names.name;
+
+//         return objectCameras;
+//     });
+
+//     newObject.name = devices.name;
+//     newObject.cameras = newArray;
+//     return newObject;
+// }
+
 function camerasName(devices, cameras) {
     const devicesArray = devices.cameraIDs;
-    let newObject = {};
-    let newArray = devicesArray.map((elementDevicesArray) => {
-        let objectCameras = {};
-        const names = cameras.find((name) => name.id === elementDevicesArray);
+    const camerasBarrier = cameras.filter((camera) => devicesArray.includes(camera.id));
+    const barrier = {
+        name: devices.name,
+        cameras: camerasBarrier,
+    };
+    return barrier;
+}
 
-        objectCameras.id = names.id;
-        objectCameras.name = names.name;
-
-        return objectCameras;
-    });
-
-    newObject.name = devices.name;
-    newObject.cameras = newArray;
-    return newObject;
+function camerasName(devices, cameras) {
+    return {
+        name: devices.name,
+        cameras: cameras.filter((camera) => devices.cameraIDs.includes(camera.id)),
+    }
 }
 
 console.log(camerasName(devices, cameras));

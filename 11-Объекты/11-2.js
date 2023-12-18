@@ -17,4 +17,5 @@ const dog = {
 // city
 // address
 
-console.log(Object.keys(dog));
+const names = Object.keys(dog);
+names.forEach((elem) => console.log(elem));
